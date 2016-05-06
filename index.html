@@ -2,22 +2,37 @@
 layout: default
 ---
 
-<div class="home">
+<section class="container-fluid hero-image"></section>
 
-  <h1 class="page-heading">Posts</h1>
+<section class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-10">
+      <h3>Features:</h3>
+      <p>4 double bedrooms</p>
+      <p>ensuite bathrooms</p>
+      <p>well-equipped kitchen</p>
+      <p>pool</p>
+      <p>table tennis and pool table</p>
+      <p>8 no of guests</p>
+    </div>
+  </div>
+</section>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+<section class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-10">
+      <h3>About Casa Della Costa</h3>
+      {% capture about-include %}{% include about.md %}{% endcapture %}
+      {{ about-include | markdownify }}
+      <a href="">Read more</a>
+    </div>
+  </div>
+</section>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+<section class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-10">
+      <img src="{{ site.baseurl }}/static/img/640_max/IMG_0173 copy.jpg" alt="">
+    </div>
+  </div>
+</section>
