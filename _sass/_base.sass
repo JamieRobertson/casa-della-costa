@@ -1,27 +1,30 @@
+@import 'bootstrap_4/bootstrap-grid'
+
 $static: '../static'
 
 
 header.site-header
-    @extend .container-fluid
-    h1
+  @extend .container-fluid
+  h1
+    display: inline-block
+  nav.site-nav
+    float: right
+    ul 
+      padding: 0
+      margin: 0
+      li 
+        list-style: none
         display: inline-block
-    nav.site-nav
-        float: right
-        ul 
-            padding: 0
-            margin: 0
-            li 
-                list-style: none
-                display: inline-block
-                margin-left: 4px
-                a 
-                    display: block 
-                    padding: 12px 20px
-                    text-decoration: none
+        margin-left: 4px
+        a 
+          display: block 
+          padding: 12px 20px
+          text-decoration: none
 
 
 .hero-image
-    min-height: 500px
-    background-image: url('#{$static}/img/1200_max/IMG_2356_copy.jpg')
-    background-size: cover
-    background-position: center
+  min-height: 500px
+  background-image: url('#{$static}/img/1200_max/IMG_2356_copy.jpg')
+  background-size: cover
+  background-position: center
+

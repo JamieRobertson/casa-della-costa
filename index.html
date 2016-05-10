@@ -20,19 +20,20 @@ layout: default
 
 <section class="container">
   <div class="row">
-    <div class="col-sm-12 col-md-10">
+    <div class="col-sm-12 col-md-8">
       <h3>About Casa Della Costa</h3>
-      {% capture about-include %}{% include about.md %}{% endcapture %}
-      {{ about-include | markdownify }}
+      <div class="truncate-text-block">
+        {% capture about-include %}{% include about.md %}{% endcapture %}
+        {{ about-include | markdownify }}
+      </div>
       <a href="">Read more</a>
+    </div>
+    <div class="col-sm-12 col-md-4">
+      {% include dates.html %}
     </div>
   </div>
 </section>
 
 <section class="container">
-  <div class="row">
-    <div class="col-sm-12 col-md-10">
-      <img src="{{ site.baseurl }}/static/img/640_max/IMG_0173 copy.jpg" alt="">
-    </div>
-  </div>
+  {% include image_gallery.html %}
 </section>

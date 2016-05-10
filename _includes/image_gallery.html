@@ -1,0 +1,16 @@
+<div class="row image-gallery">
+	<div class="col-sm-12 col-md-12">
+		<ul class="block-grid-xs-1 block-grid-sm-2 block-grid-md-3 block-grid-lg-4">
+			
+			{% for image in site.data.images %}	
+				<li class="block-grid-item">
+					<a href="#">
+						<img class="lazy" data-original="{{ site.baseurl }}/static/img/640_max/{{ image.src }}" alt="{{ image.title }}" style="width: 100%;">
+						<p>{{ image.description }}</p>
+					</a>
+				</li>
+			{% endfor %}
+
+		</ul>
+	</div>
+</div>
