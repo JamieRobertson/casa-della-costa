@@ -11,10 +11,15 @@
 @import 'bootstrap_4/utilities'
 @import 'bootstrap_4/utilities-responsive'
 
-$screen-xs-min: 0px
-$screen-sm-min: 544px
-$screen-md-min: 768px
-$screen-lg-min: 992px
+$screen-xs-min: 480px
+$screen-xs-max: 767px  // Use this breakpoint - not xs-min
+$screen-sm-min: 768px
+$screen-md-min: 992px
+$screen-lg-min: 1200px
+
+@mixin font-smoothing
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
 
 @import 'block-grid'
 @import 'base'

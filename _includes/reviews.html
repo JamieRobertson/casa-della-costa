@@ -1,0 +1,12 @@
+<div class="row reviews">
+	<div class="col-sm-12">
+		{% for review in site.data.reviews %}
+			<h4>{{ review.author }}
+				<small>
+					{{ review.date }}		
+				</small>
+			</h4>
+			<p>{{ review.content }}</p>
+		{% endfor %}		
+	</div>
+</div>

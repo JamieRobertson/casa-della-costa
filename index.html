@@ -1,34 +1,53 @@
 ---
 layout: default
+body_class: bg-muted
 ---
 
 <section class="container-fluid hero-image"></section>
 
-<section class="container">
-  <div class="row">
-    <div class="col-sm-12 col-md-10">
-      <h3>Features:</h3>
-      <p>4 double bedrooms</p>
-      <p>ensuite bathrooms</p>
-      <p>well-equipped kitchen</p>
-      <p>pool</p>
-      <p>table tennis and pool table</p>
-      <p>8 no of guests</p>
+<section class="features">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-12">
+        <!-- <h3>Features</h3> -->
+        <ul class="block-grid-xs-3 block-grid-sm-5 block-grid-md-5 block-grid-lg-5">
+          <li class="block-grid-item">
+            <i class="icon-guest"></i>
+            <p>Sleeps 8 guests</p>
+          </li>
+          <li class="block-grid-item">
+            <i class="icon-bedroom"></i>
+            <p>4 double bedrooms</p>  
+          </li>
+          <li class="block-grid-item">
+            <i class="icon-bathroom"></i>
+            <p>Ensuite bathrooms</p>
+          </li>
+          <li class="block-grid-item">
+            <i class="icon-kitchen"></i>
+            <p>Well-equipped kitchen</p>  
+          </li>
+          <li class="block-grid-item">
+            <i class="icon-pool"></i>
+            <p>Relaxing pool</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="container">
   <div class="row">
-    <div class="col-sm-12 col-md-8">
+    <div class="col-sm-12 col-md-8 col-lg-7">
       <h3>About Casa Della Costa</h3>
-      <div class="truncate-text-block">
+      <div class="jsExpand is-truncated">
         {% capture about-include %}{% include about.md %}{% endcapture %}
         {{ about-include | markdownify }}
+        <a href="#" class="jsExpandTrigger">Read more</a>
       </div>
-      <a href="">Read more</a>
     </div>
-    <div class="col-sm-12 col-md-4">
+    <div class="col-sm-12 col-md-4 col-lg-4 col-lg-offset-1">
       {% include dates.html %}
     </div>
   </div>
@@ -36,4 +55,5 @@ layout: default
 
 <section class="container">
   {% include image_gallery.html %}
+  <a class="btn btn-primary" href="#">View more photos</a>
 </section>

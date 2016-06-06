@@ -1,30 +1,176 @@
 @import 'bootstrap_4/bootstrap-grid'
 
 $static: '../static'
+$primary-color: tomato
+$header-nav-hover-color: #f3f3f3
+$bg-muted-color: #dcdad8
+$semi-bold: 600
+$default-transition: background-color .2s linear
 
+body
+  font-family: 'Source Sans Pro', sans-serif
+  font-weight: normal
+  font-weight: 400
+
+h1, h2, h3, h4, h5, h6
+  font-weight: normal
+  line-height: 1.2
+  margin-bottom: 1rem  // add more margin bottom
+
+h3
+  font-size: 24px
+  color: #4a4a4a
+
+p
+  font-size: 1.1rem
+
+a
+  color: #3399cc
+  text-decoration: none
+  &:hover
+    color: #3399cc
+    text-decoration: underline
+
+.bg-muted
+  background-color: $bg-muted-color
+
+.callout
+  @include clearfix
+  background-color: white
+  border-radius: 2px 
+  border: 1px solid #acacac
+  margin: 60px 10px
+
+a.btn
+  display: inline-block
+  padding: 10px 21px 
+  margin: 10px 0 20px
+  text-transform: uppercase
+  letter-spacing: .5px
+  border-radius: 3px
+  transition: $default-transition
+  &.btn-primary
+    @include font-smoothing
+    color: white
+    font-weight: bold
+    font-weight: $semi-bold
+    background-color: $primary-color
+    border: 2px solid darken($primary-color, 2%)
+    &:hover
+      text-decoration: none
+      background-color: darken($primary-color, 7.5%)
 
 header.site-header
   @extend .container-fluid
-  h1
+  h1.site-title
     display: inline-block
+    margin-bottom: 0
+    a 
+      display: block
+      padding-top: 8px
+      &, &:hover
+        color: #222
+        text-decoration: none
   nav.site-nav
-    float: right
+    float: left
+    width: 100%
     ul 
       padding: 0
       margin: 0
       li 
+        width: 25%
         list-style: none
         display: inline-block
-        margin-left: 4px
         a 
           display: block 
-          padding: 12px 20px
+          padding: 12px 0
           text-decoration: none
-
+          transition: $default-transition
+    @media (min-width: $screen-sm-min)
+      float: right
+      width: auto
+      ul 
+        li 
+          margin-left: 4px
+          width: auto
+          a 
+            padding: 16px 20px
+            background-color: white
+            &:hover
+              background-color: $header-nav-hover-color
 
 .hero-image
   min-height: 500px
   background-image: url('#{$static}/img/1200_max/IMG_2356_copy.jpg')
   background-size: cover
   background-position: center
+  @media (min-width: $screen-lg-min)
+    min-height: 650px
+
+.features
+  background-color: $bg-muted-color
+  min-height: 120px
+  margin-bottom: 50px
+  ul
+    text-align: center
+    i[class^="icon"]
+      margin: 0 auto
+    i.icon-guest
+
+    i.icon-bedroom
+
+    i.icon-bathroom
+
+    i.icon-kitchen
+
+    i.icon-pool
+
+html.js
+  .jsExpand 
+    height: auto
+    position: relative
+    &.is-truncated
+      height: 400px
+      overflow-y: hidden
+      a.jsExpandTrigger
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 50px
+        background-color: white
+        text-align: center
+
+footer.site-footer
+  @include font-smoothing
+  border-top: 2px solid #111111
+  background-color: #2a2a2a
+  margin-top: 50px 
+  padding-top: 30px
+  padding-bottom: 200px
+  h3 
+    font-weight: normal
+    color: #d0ccca
+    small::before
+      content: ' '
+      display: block
+      width: 30px
+      height: 1px
+      // background-color: #999
+      margin: 6px 0 3px
+  #contact-info a
+    color: white
+    font-weight: bold
+    font-weight: $semi-bold
+    text-decoration: none
+    border-bottom: 2px solid #ccc
+    padding-bottom: 3px
+
+  ul.share-block
+    padding: 0
+    li 
+      list-style: none
+      a 
+        width: 50px
+        height: 50px
 

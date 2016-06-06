@@ -1,11 +1,13 @@
 <header class="site-header">
-  <h1>Casa Della Costa</h1>
+  <h1 class="site-title"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
   <nav class="site-nav">
       <ul>
-          <li><a href="#">Photos</a></li><!--
-       --><li><a href="#">Location</a></li><!--
+          <li><a href="{{ site.baseurl }}/photos/">Photos</a></li><!--
+       --><li><a href="#location-info">Location</a></li><!--
        --><li><a href="#">Reviews</a></li><!--
-       --><li><a href="#">Contact</a></li>
+       --><li><a href="#contact-info">Contact</a></li>
       </ul>
   </nav>
 </header>
+
+{% include icons_svg.html %}
