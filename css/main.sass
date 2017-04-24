@@ -21,5 +21,34 @@ $screen-lg-min: 1200px
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
+@mixin text-center
+  text-align: center
+
+@mixin font-weight-lighter
+  font-weight: lighter
+  font-weight: 300
+
+@mixin list-columns($padding: 30px 0, $default: 1, $xs: 2, $sm: 4, $md: 5, $lg: 6)
+  -webkit-column-count: $default
+  -moz-column-count: $default
+  column-count: $default
+  padding: $padding
+  @media (min-width: $screen-xs-min)
+    -webkit-column-count: $xs
+    -moz-column-count: $xs
+    column-count: $xs
+  @media (min-width: $screen-sm-min)
+    -webkit-column-count: $sm
+    -moz-column-count: $sm
+    column-count: $sm
+  @media (min-width: $screen-md-min)
+    -webkit-column-count: $md
+    -moz-column-count: $md
+    column-count: $md
+  @media (min-width: $screen-lg-min)
+    -webkit-column-count: $lg
+    -moz-column-count: $lg
+    column-count: $lg
+
 @import 'block-grid'
 @import 'base'

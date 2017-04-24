@@ -1,0 +1,11 @@
+- Wireless internet
+- Free parking on premises
+- Buzzer/wireless intercom
+- Well-equiped kitchen
+- Ping pong table
+- Pool table
+- Cable TV and DVDs
+- Indoor fireplace
+- Heating
+- Iron 
+- Bathroom essentials

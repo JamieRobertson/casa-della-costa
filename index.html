@@ -1,59 +1,80 @@
 ---
 layout: default
-body_class: bg-muted
 ---
 
 <section class="container-fluid hero-image"></section>
 
-<section class="features">
-  <div class="container">
+<section class="container">
+  <div class="row text-center">
+    <div class="col-sm-12 col-md-8 col-md-offset-2">
+        <h1 class="splash">{{ site.description }}</h1>
+    </div>
+  </div>
+
+  <section class="features">
     <div class="row">
       <div class="col-sm-12 col-md-12">
-        <!-- <h3>Features</h3> -->
         <ul class="block-grid-xs-3 block-grid-sm-5 block-grid-md-5 block-grid-lg-5">
           <li class="block-grid-item">
             <i class="icon-guest"></i>
-            <p>Sleeps 8 guests</p>
+            <h3 class="p">Sleeps 8 guests</h3>
           </li>
           <li class="block-grid-item">
             <i class="icon-bedroom"></i>
-            <p>4 double bedrooms</p>  
+            <h3 class="p">4 double bedrooms</h3>  
           </li>
           <li class="block-grid-item">
             <i class="icon-bathroom"></i>
-            <p>Ensuite bathrooms</p>
+            <h3 class="p">Ensuite bathrooms</h3>
           </li>
           <li class="block-grid-item">
             <i class="icon-kitchen"></i>
-            <p>Well-equipped kitchen</p>  
+            <h3 class="p">Well-equipped kitchen</h3>  
           </li>
           <li class="block-grid-item">
             <i class="icon-pool"></i>
-            <p>Relaxing pool</p>
+            <h3 class="p">Relaxing pool</h3>
           </li>
         </ul>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="container">
   <div class="row">
-    <div class="col-sm-12 col-md-8 col-lg-7">
-      <h3>About Casa Della Costa</h3>
+    <div class="col-sm-12 col-md-8">
+      
+      {% capture intro_include %}{% include intro.md %}{% endcapture %}
+      {{ intro_include | markdownify }}
+      
+      <h3>Full list of amenities</h3>
+      <div class="list-columns">
+        {% capture amenities_include %}{% include amenities.md %}{% endcapture %}
+        {{ amenities_include | markdownify }}
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12 col-md-8">
       <div class="jsExpand is-truncated">
-        {% capture about-include %}{% include about.md %}{% endcapture %}
-        {{ about-include | markdownify }}
+        {% capture about_include %}{% include about.md %}{% endcapture %}
+        {{ about_include | markdownify }}
         <a href="#" class="jsExpandTrigger">Read more</a>
       </div>
     </div>
-    <div class="col-sm-12 col-md-4 col-lg-4 col-lg-offset-1">
+    <div class="col-sm-12 col-md-4">
       {% include dates.html %}
     </div>
   </div>
-</section>
 
-<section class="container">
   {% include image_gallery.html %}
   <a class="btn btn-primary" href="#">View more photos</a>
+
+  {% include location.html %}
+
+  {% include reviews.html %}
+
+  {% include temperature.html %}
+
 </section>

@@ -6,10 +6,15 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Casa della Costa
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  A beautiful Italian villa in Umbria
+title_meta: Casa Della Costa | Umbrian villa in Italy 
+title: Casa Della Costa
+email: hello@casa-della-costa.com
+description_meta: >  # this means to ignore newlines
+  A large and welcoming traditional Umbrian villa with a relaxing swimming pool, 
+  situated in a peaceful valley in Umbertide, Italy | 
+  Available for rentals | Perfect for families and large groups.
+description: >  # this means to ignore newlines
+  Relax and unwind by the pool at our peaceful Italian villa 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site - was - http://yourdomain.com
 

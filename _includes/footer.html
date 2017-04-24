@@ -1,16 +1,17 @@
-<footer class="site-footer">
+<footer id="contact" class="site-footer">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-12 col-md-8 col-lg-7">
-				<h3>
-			    {{ site.title }} <br>
-			    <small>
-			      {{ site.description }} <br>
-			    	{% include contact.html %}  
-			    </small>
-			  </h3>
+			<div class="col-sm-12 col-md-8">
+				<h3>{{ site.title }}</h3>
+			    <p>
+				    For more information please contact: <br> 
+					<span class="jsAddContact"></span>
+				</p>
+			    <p>
+			    	Full directions can be found <a href="{{ site.baseurl }}/directions/">here</a>.
+			    </p>
 			</div>
-			<div class="col-sm-12 col-md-4 col-md-5">
+			<div class="col-sm-12 col-md-4">
 				{% include share_block.html %}
 			</div>
 		</div>

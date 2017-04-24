@@ -1,0 +1,16 @@
+---
+layout: default
+title: Directions
+permalink: /directions/
+---
+
+<section class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8">
+
+      {% capture directions_include %}{% include directions.md %}{% endcapture %}
+      {{ directions_include | markdownify }}
+
+    </div>
+  </div>
+</section>
