@@ -1,8 +1,8 @@
 ## Directions
 
-### Detailed directions from Fumicino airport
+### Detailed directions from Fiumicino airport
 
-From [Fumicino airport](http://www.adr.it/web/aeroporti-di-roma-en-/pax-fco-fiumicino) you go to the ring road - the A 90, and you head north. You leave the ring road and join the E 35. This heads North until it joins and becomes the E 45.
+From [Fiumicino airport](http://www.adr.it/web/aeroporti-di-roma-en-/pax-fco-fiumicino) you go to the ring road - the A 90, and you head north. You leave the ring road and join the E 35. This heads North until it joins and becomes the E 45.
 
 You follow this all the way north to Orte. This is a junction where the E 45 heads off to the North East. You stay on the E 45. Take care as you leave the slip road onto the E 45.
 
